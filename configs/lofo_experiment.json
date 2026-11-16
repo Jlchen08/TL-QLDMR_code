@@ -47,6 +47,6 @@
   },
   "assessment": "Raw heldout H2, retrospective; noheldout Q2calibration; score requiresmainrelease and allLOFOchoices/finalattempts frozen",
   "failure": "All attempts persisted; missing choice or any missingseed/site makes aggregate NR; no fallback after assessment",
-  "deadline_policy": "User-authorized development cutoff; only completed qualified original folds selected. Unfinished and failed are distinct.",
+  "deadline_policy": "Development was stopped at the recorded cutoff; selection used only candidates that completed every required fold and met the numerical criteria. Failed and unfinished attempts are recorded separately.",
   "source_sha256": "d966cc9bbdd2cf6e2f842d05e533d2ba149127861beea39af7f4272c89b2d144"
 }

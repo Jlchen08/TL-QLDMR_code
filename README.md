@@ -23,7 +23,7 @@ Python 3.10+ is required. The core uses NumPy, SciPy and scikit-learn on CPU; no
 - `src/tlqldmr/preprocessing.py`: fit-only imputation/scaling, weather-tail labels, temporal purging and raw-measurement overlap checks extracted from the formal study.
 - `src/tlqldmr/metrics.py`: normalized point/interval scores, native-nine-head WIS and nonnegative finite-rank calibration expansion.
 - `configs/selected_tl/`: 18 recorded TL-QLDMR farm/task configurations (six farms × point/95% interval/distribution), with final fitting seeds 0, 1 and 2.
-- `configs/kernel_search.json` and `configs/baseline_search.json`: registered 96-candidate spaces and baseline recipes. The older 24-row `candidate_schedule` utility retained inside the frozen kernel source is not the formal96-candidate schedule; use these JSON spaces for the revised study. The baseline configuration file documents the original comparator roster; this focused release does not implement every historical comparator pipeline.
+- `configs/kernel_search.json` and `configs/baseline_search.json`: registered 96-candidate spaces and baseline recipes. The older 24-row `candidate_schedule` utility retained inside the frozen kernel source is not the formal 96-candidate schedule; use these JSON spaces for the revised study. The baseline configuration file documents the original comparator roster; this focused release does not implement every historical comparator pipeline.
 - `configs/formal_protocol.json`, `component_experiment.json`, `lofo_experiment.json` and `cost_experiment.json`: chronological development, matched components/loss masses, cross-farm label budgets and computational settings.
 - `provenance/source_manifest.json`: frozen source hashes and the precise extraction/import adjustments.
 

@@ -52,6 +52,6 @@
   },
   "scoring": "Point integratednative9 and originaltau.5; raw95+commonstatic95; WIS diagnostic; y-pred residual; synchronous7day10000 bootstrap/Holm; complete3seedthen6site mean else NR",
   "assessment": "Retrospective H2; main release AND allownattempts frozen before label decoding",
-  "deadline_policy": "User-authorized development cutoff; only completed qualified original folds selected. Unfinished and failed are distinct.",
+  "deadline_policy": "Development was stopped at the recorded cutoff; selection used only candidates that completed every required fold and met the numerical criteria. Failed and unfinished attempts are recorded separately.",
   "source_sha256": "8c2f4944017cf8615d7cc56cf3d8ea72b4828e63d2f1233ce2ebbdcb0b7fbb2c"
 }
