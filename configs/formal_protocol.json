@@ -1,0 +1,121 @@
+{
+  "version": "deadline_20261114_cutoff_qualified_full6farm_final3seed",
+  "sites": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "query_budget": 96,
+  "final_seeds": [
+    0,
+    1,
+    2
+  ],
+  "original_point_methods": [
+    "TL-QLDMR",
+    "Standard-SVR",
+    "Standard-LDMR",
+    "BLSSVR",
+    "HHO-SVR",
+    "FLSVR",
+    "ARA-SVR",
+    "KMeans-GBT",
+    "RF-WPF",
+    "BRF-WPF"
+  ],
+  "original_interval_methods": [
+    "TL-QLDMR",
+    "Standard-SVQR",
+    "TSVQR",
+    "UQSVM-SSVQR",
+    "NFS-SVQR",
+    "NuSVR-CI",
+    "RLMKL",
+    "HybridDL-Interval",
+    "AMQRNN",
+    "QGBR",
+    "CQR-MLP"
+  ],
+  "nine_head_methods": [
+    "TL-QLDMR",
+    "Standard-SVQR",
+    "HistQGBR",
+    "AMQRNN",
+    "CQR-MLP",
+    "RLMKL",
+    "NFS-SVQR",
+    "UQSVM-SSVQR"
+  ],
+  "pair_methods": [
+    "TSVQR",
+    "NuSVR-CI",
+    "HybridDL-Interval",
+    "QGBR"
+  ],
+  "additional_comparator": "HistQGBR",
+  "taus": [
+    0.025,
+    0.05,
+    0.1,
+    0.25,
+    0.5,
+    0.75,
+    0.9,
+    0.95,
+    0.975
+  ],
+  "fitting": "Exact uncapped full2019 fitting arrays from frozen developmentfold03; no Q1/Q2/H2 fit labels added",
+  "selection": "Freeze original four-fold-qualified cutoff choices once. Initially unavailable groups may use only prescribed missing-fold completions selected by completion counts and original index, never partial losses. Equal four-fold objective mean and lower-index ties; failures and unfinished attempts remain distinct. No assessment-based selection.",
+  "numerical": "Original TL/SVQR primal/feasibledual gap1e-5/1e-7; max100iterations/120secondshead; baseline original qualifications",
+  "aggregation": "Everyseed metric then3seedmean then6sites equalweight; incomplete methodmean NR",
+  "preprocessing_exception": "Evaluation originally missing values retain V1 2019-only fitting means before full2019 centering/scaling; same for allmethods",
+  "assessment": "Previously inspected H2; retrospective assessment. No claim of untouched validation.",
+  "calibration": "Common Q2 finite-rank nonnegative interval expansion; raw andstatic separate",
+  "development_search_complete": false,
+  "registered_query_budget": 96,
+  "source_sha256": "76c4689c36b6354e724d76e8b8ef8e28af6c59ea7ee007e8d5e8ac592dbb362e",
+  "development_folds": [
+    {
+      "fold": 0,
+      "fit_start": "2019-01-01",
+      "fit_end": "2019-05-01",
+      "validation_start": "2019-05-01",
+      "validation_end": "2019-07-01"
+    },
+    {
+      "fold": 1,
+      "fit_start": "2019-01-01",
+      "fit_end": "2019-07-01",
+      "validation_start": "2019-07-01",
+      "validation_end": "2019-10-01"
+    },
+    {
+      "fold": 2,
+      "fit_start": "2019-01-01",
+      "fit_end": "2019-10-01",
+      "validation_start": "2019-10-01",
+      "validation_end": "2020-01-01"
+    },
+    {
+      "fold": 3,
+      "fit_start": "2019-01-01",
+      "fit_end": "2020-01-01",
+      "validation_start": "2020-01-01",
+      "validation_end": "2020-04-01"
+    }
+  ],
+  "calibration_period": [
+    "2020-04-01",
+    "2020-07-01"
+  ],
+  "assessment_period": [
+    "2020-07-01",
+    "2021-01-01"
+  ],
+  "endpoint_purge_hours": 6,
+  "weather_window_steps": 24,
+  "step_minutes": 15
+}

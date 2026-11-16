@@ -1,0 +1,85 @@
+{
+  "status": "passed",
+  "scope": "Synthetic core and portable CLI; no six-farm experiment rerun",
+  "python": "3.13.1 (v3.13.1:06714517797, Dec  3 2024, 14:00:22) [Clang 15.0.0 (clang-1500.3.9.4)]",
+  "numpy": "2.3.5",
+  "scipy": "1.16.3",
+  "scikit_learn": "1.7.2",
+  "checks": [
+    "source-centered objective identity",
+    "domain loss masses",
+    "all9 original primal/feasible-dual certificates",
+    "model-state prediction roundtrip",
+    "CLI fit/predict/score",
+    "inference labels rejected",
+    "18 selected configurations match frozen metadata",
+    "editable package install in dedicated venv with system scientific dependencies",
+    "installed tlqldmr entry point --help",
+    "installed package synthetic9-head smoke"
+  ],
+  "commands": [
+    {
+      "command": [
+        "python",
+        "examples/smoke.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"status\": \"passed\", \"data\": \"synthetic only\", \"native_heads\": 9, \"original_objective_identity\": true, \"dual_gap_certificates\": true, \"model_roundtrip\": true}",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "tlqldmr",
+        "fit",
+        "--fit",
+        "<temporary synthetic input/output>",
+        "--inference",
+        "<temporary synthetic input/output>",
+        "--config",
+        "<temporary synthetic input/output>",
+        "--output",
+        "<temporary synthetic input/output>"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"status\": \"complete\", \"heads\": 9}",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "tlqldmr",
+        "predict",
+        "--model",
+        "<temporary synthetic input/output>",
+        "--inference",
+        "<temporary synthetic input/output>",
+        "--output",
+        "<temporary synthetic input/output>"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"status\": \"complete\"}",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "tlqldmr",
+        "score",
+        "--predictions",
+        "<temporary synthetic input/output>",
+        "--targets",
+        "<temporary synthetic input/output>",
+        "--output",
+        "<temporary synthetic input/output>"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"status\": \"scored\", \"rows\": 10}",
+      "stderr": ""
+    }
+  ],
+  "packaging_scope": "Installed editable in dedicated venv with NumPy/SciPy/sklearn inherited; not a clean independent full dependency installation."
+}

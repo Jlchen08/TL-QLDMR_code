@@ -1,0 +1,39 @@
+{
+  "method": "TL-QLDMR",
+  "site": 3,
+  "objective": "point",
+  "fit_source_rows": 32803,
+  "fit_target_rows": 2017,
+  "final_seeds": [
+    0,
+    1,
+    2
+  ],
+  "candidate_index": 9,
+  "params": {
+    "C": 1.0,
+    "target_fraction": 0.5,
+    "eta1": 0.001,
+    "eta2": 0.0,
+    "rank": 256,
+    "landmark_strategy": "uniform",
+    "gamma": 0.0015173442625003005,
+    "regularization_parameterization": "effective",
+    "candidate": 9,
+    "lambda1": 34.82,
+    "lambda2": 0.0,
+    "C_source": 0.5307441392555559,
+    "C_target": 8.63163113534953,
+    "representation": "recent",
+    "gamma_multiplier": 0.25,
+    "fit_distance_median_squared": 164.7615548946332
+  },
+  "selection_sha256": "4fde87911f248e0fcb03e44900c62630217fcf33178ef7f1753b31e0636c0754",
+  "metadata_source_sha256": "3a33a9da81dd1a97663183dd509439494909f73802ce4172487c604fb9c188ea",
+  "numerical": {
+    "gap_rtol": 1e-05,
+    "gap_atol": 1e-07,
+    "max_iter": 100,
+    "max_seconds_per_head": 120
+  }
+}

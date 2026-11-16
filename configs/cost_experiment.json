@@ -1,0 +1,133 @@
+{
+  "version": "V2_E5_selected_representation_cold_ninehead_20261113",
+  "farm": 1,
+  "taus": [
+    0.025,
+    0.05,
+    0.1,
+    0.25,
+    0.5,
+    0.75,
+    0.9,
+    0.95,
+    0.975
+  ],
+  "gap_rtol": 1e-05,
+  "gap_atol": 1e-07,
+  "max_iterations": 100,
+  "seconds_per_head": 120,
+  "seconds_per_cell": 7200,
+  "repeats": 3,
+  "sample_sizes": [
+    1000,
+    3000,
+    8000,
+    16000,
+    34897
+  ],
+  "ranks": [
+    80,
+    128,
+    256,
+    512
+  ],
+  "rank1200": "Retained at N<=3000, actual min(rank,N) explicitly reported",
+  "exact_reference": "All fitting rows as RBF components; symmetric eigendecomposition, retained eigenvalues>max(1e-12,maxeig*1e-12); no diagonal ridge. Report discarded spectrum and Gram reconstruction error.",
+  "subset": "Nested source/target random permutation seed20261117, rounded proportional counts, source first; identical subset across ranks/repeats and chosen procedures",
+  "preprocessing": "Reuse exact full2019 fold03 imputer/feature and label scaling, a computation study not a subset learning curve. Representation fit separately on current subset X only.",
+  "parameters": "Chosen C/p/eta unchanged; lambda=eta*C*Ncurrent; relativegamma uses current subset representation median distance; rank overridden by grid.",
+  "repetitions": "Three fresh cold processes with fixed fitting subset and landmark seed0; timing repeats, not three independent fitting seeds.",
+  "inference": "Every original Q1 Xval covariate, no Q1 y. Preserve disclosed old2019 main fill; no extra validation statistic. Report standardized and MW prediction differences versus matching dense reference, never predictive accuracy.",
+  "geometry": "First min(512,N) fitting RBF block relative Frobenius error; no outcomes.",
+  "measurements": [
+    "cold data load",
+    "representation fit+training transform",
+    "fit distance scale",
+    "landmark selection",
+    "landmark normalization",
+    "training map transform",
+    "objective assembly",
+    "nine heads optimization",
+    "inference representation+map+prediction",
+    "peak process RSS"
+  ],
+  "failure": "All9 heads attempted under original certificates, every failure/timecap recorded. Cell success requires all9 qualified; no substitution or relaxed tolerance.",
+  "assessment_labels_read": false,
+  "Q1_outcomes_read": false,
+  "Q2_H2_arrays_read": false,
+  "source_sha256": "05a9bf7b56f2fcaa879a329055915914efc6c488a40150e36b7eef566be21255",
+  "choices": [
+    {
+      "index": 43,
+      "recipe": {
+        "index": 43,
+        "representation": "last",
+        "C": 0.7064843452977925,
+        "gamma_multiplier": 2.5291648190158322,
+        "target_fraction": 0.75,
+        "eta1": 0.0003590104326045425,
+        "eta2": 2.7373122703022987e-06,
+        "rank": 512,
+        "landmark_strategy": "uniform"
+      },
+      "objectives": [
+        "point"
+      ]
+    },
+    {
+      "index": 51,
+      "recipe": {
+        "index": 51,
+        "representation": "last",
+        "C": 0.17524256014140155,
+        "gamma_multiplier": 0.983805695553748,
+        "target_fraction": 0.25,
+        "eta1": 0.0,
+        "eta2": 2.1349452897264304e-07,
+        "rank": 128,
+        "landmark_strategy": "balanced_domains"
+      },
+      "objectives": [
+        "prob95"
+      ]
+    }
+  ],
+  "E5_plan": {
+    "retain": "Original objective/convexity derivation and correctly qualified V1 originalhistory numerical benchmark remain historical numerical evidence, clearly labeled",
+    "new_measurement": "For Farm1 point/prob95 selected V2 representation procedures, identical modes may deduplicate. Record representation/landmarks/map/optimization/inference stages, memory, full9head total time and every primal/feasibledual gap",
+    "N": [
+      1000,
+      3000,
+      8000,
+      16000,
+      "all accepted2019 up toactual sitebound"
+    ],
+    "ranks": [
+      80,
+      128,
+      256,
+      512
+    ],
+    "extra_anchor": "rank1200 at smallN and exact-kernel referenceN<=1000; explicitly actualmin(rank,N)",
+    "repeats": 3,
+    "accuracy": "Separate approximatekernel prediction error and originalobjective optimization certificate; common original stopping tolerance; report failures/timeouts"
+  },
+  "loaded_fields": [
+    "Xfit",
+    "yfit",
+    "fit_ids",
+    "fit_input_ids",
+    "fit_times",
+    "n_source",
+    "n_target",
+    "label_mean",
+    "label_scale",
+    "feature_mean",
+    "feature_scale",
+    "Xval",
+    "validation_ids"
+  ],
+  "n_full": 34897,
+  "n_source": 32827,
+  "n_target": 2070
+}

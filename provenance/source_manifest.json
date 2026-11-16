@@ -1,0 +1,66 @@
+{
+  "source_archive": "TLQLDMR_computation_deadline_20261115.zip",
+  "frozen_scientific_source": true,
+  "files": [
+    {
+      "public_path": "src/tlqldmr/kernel_model.py",
+      "source_path": "review/formal_TLQLDMR_20261113/kernel/kernel_model.py",
+      "source_sha256": "72ae2e9fef16c0d7a68ac784b2324bc9233429d4b7decfc887c4cebc394589e4",
+      "public_sha256": "9ccad2b6709af236eb88270d5f439e36760a3f556d5868a4c0fb5fa1b59c50a7",
+      "change": "package-relative solver import only"
+    },
+    {
+      "public_path": "src/tlqldmr/structured_ipm.py",
+      "source_path": "review/formal_TLQLDMR_20261113/kernel/structured_ipm.py",
+      "source_sha256": "b1ab12952d6702d8f7ff85f8b87d4f86aff8691a2501b8c092add41d1eb2039f",
+      "public_sha256": "b1ab12952d6702d8f7ff85f8b87d4f86aff8691a2501b8c092add41d1eb2039f",
+      "change": "byte-identical frozen source"
+    },
+    {
+      "public_path": "src/tlqldmr/metrics.py",
+      "source_path": "review/formal_TLQLDMR_20261113/runner/study_metrics.py",
+      "source_sha256": "69a68b656b3638e751a796f4bf418722a33db1f4666de963dcbf27a1210d668e",
+      "public_sha256": "69a68b656b3638e751a796f4bf418722a33db1f4666de963dcbf27a1210d668e",
+      "change": "byte-identical frozen source"
+    },
+    {
+      "public_path": "src/tlqldmr/weather_representation.py",
+      "source_path": "review/formal_improvement_v2_20261113/weather_representation.py",
+      "source_sha256": "6820d6abcbe2340d9e34cd1a8b0bf94473f3a97aedfd78ac682a9b118bf833c2",
+      "public_sha256": "6820d6abcbe2340d9e34cd1a8b0bf94473f3a97aedfd78ac682a9b118bf833c2",
+      "change": "byte-identical frozen source"
+    },
+    {
+      "public_path": "src/tlqldmr/baseline_recipes.py",
+      "source_path": "review/formal_improvement_v2_20261113/baseline_methods_v2.py",
+      "source_sha256": "4fcc575110884801219c62f004e516f44f8b166560423dd9fd5464d2583c8fe8",
+      "public_sha256": "4fcc575110884801219c62f004e516f44f8b166560423dd9fd5464d2583c8fe8",
+      "change": "byte-identical frozen source"
+    },
+    {
+      "public_path": "src/tlqldmr/preprocessing.py",
+      "source_path": "review/formal_improvement_v2_20261113/rolling_data.py",
+      "source_sha256": "fe1d4535a9f447d7286f4b1f85ffc0cf1770737c0784b3a76598fd2c44e16dab",
+      "public_sha256": "9402b79d653b69f185f479a1077f37459130bc79dd25306aa2ff27692b7cac4e",
+      "change": "Exact standalone function extraction; excludes legacy path/cache preparation CLI",
+      "functions": [
+        "physical_weather",
+        "thresholds",
+        "extreme",
+        "time_mask",
+        "transform",
+        "fit_arrays",
+        "audit_arrays"
+      ]
+    }
+  ],
+  "configuration_sources": [
+    "review/formal_deadline_20261114/reports/TL_selected_metadata.json",
+    "review/formal_improvement_v2_20261113/development_protocol.json",
+    "review/formal_improvement_v2_20261113/baseline_protocol.json",
+    "review/formal_deadline_20261114/main_protocol.json",
+    "review/formal_deadline_20261114/component_final/protocol.json",
+    "review/formal_deadline_20261114/lofo/protocol.json",
+    "review/formal_improvement_v2_20261113/cost_v2/protocol.json"
+  ]
+}

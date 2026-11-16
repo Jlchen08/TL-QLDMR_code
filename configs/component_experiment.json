@@ -1,0 +1,57 @@
+{
+  "version": "V2_E4_final_fixed_independent_mass_residual_20261113",
+  "sites": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "objectives": [
+    "point",
+    "prob95"
+  ],
+  "fixed_methods": [
+    "TL-QLDMR",
+    "NoVariance",
+    "NoAlignment",
+    "Weighted-SVQR"
+  ],
+  "independent_methods": [
+    "TL-QLDMR",
+    "NoVariance",
+    "NoAlignment",
+    "Weighted-SVQR",
+    "Target-onlyQLDMR",
+    "Target-onlySVQR"
+  ],
+  "masses": [
+    "empirical",
+    0.5,
+    0.9,
+    0.99
+  ],
+  "intervention": "Same main Full task-selected C,p,gamma,representation,map/seed/data; remove only named eta; zero-term exact self-controls share identical fit closure",
+  "independent": "All96 complete-fourfold independent choices; Weighted-SVQR exact Standard-SVQR reference in development; target-only ownraw preprocessing",
+  "target_only": "QLDMR ns=N,nt=0 applies variance to target-only rows; SVQR ns=0,nt=N; alignment inactive; no normal-source imputation or fit labels",
+  "mass": "Same total C*N and allother task-selected parameters; empirical=nt/N; no assessment selection",
+  "prediction": "Raw9heads MW, Q2/H2 only; matched/full main reference exact closure where available; no extra conditional training",
+  "numerical": {
+    "gap_rtol": 1e-05,
+    "gap_atol": 1e-07,
+    "max_iter": 100,
+    "seconds_per_head": 120,
+    "seconds_per_fit": 7200,
+    "device": "cpu"
+  },
+  "scoring": "Point integratednative9 and originaltau.5; raw95+commonstatic95; WIS diagnostic; y-pred residual; synchronous7day10000 bootstrap/Holm; complete3seedthen6site mean else NR",
+  "assessment": "Retrospective H2; main release AND allownattempts frozen before label decoding",
+  "deadline_policy": "User-authorized development cutoff; only completed qualified original folds selected. Unfinished and failed are distinct.",
+  "source_sha256": "8c2f4944017cf8615d7cc56cf3d8ea72b4828e63d2f1233ce2ebbdcb0b7fbb2c"
+}

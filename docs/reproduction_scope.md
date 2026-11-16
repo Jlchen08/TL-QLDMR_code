@@ -1,0 +1,11 @@
+# Scope and provenance
+
+The scientific core is taken from the frozen computational record accompanying the revised manuscript. `structured_ipm.py`, `metrics.py`, `weather_representation.py` and `baseline_recipes.py` retain the frozen source bytes. `kernel_model.py` changes only its solver import to a package-relative import. Seven standalone functions from `rolling_data.py` are copied exactly into `preprocessing.py`; server-specific archive decoding/cache orchestration is excluded. `provenance/source_manifest.json` records both frozen and public hashes.
+
+The CLI is a portable integration wrapper. It follows the formal main-study runner: fit the covariate-only representation on the joint source/target fitting matrix, estimate the median fitting pair distance, instantiate relative RBF bandwidth, fit all nine heads using the unchanged weighted pinball objective, and reverse fitting-label standardization. It preserves raw predictions. It is not the original server scheduler and does not regenerate every submitted table from a fresh download.
+
+The released selected parameters preserve the six farm/task choices and metadata-source hash. Search JSON files retain the registered candidate values and selection rules. A registered budget of 96 is not a claim that all 96 candidates qualified. Failed, unfinished and completed candidates remained distinct; the full retained attempt ledgers are in the revision's computational record.
+
+The following are intentionally outside this focused repository: original dataset files and raw window caches, saved final predictions/model weights, exact per-observation split CSVs, historical baseline implementation dependencies, scheduler/resource monitoring code, manuscript and rebuttal generation, exhaustive run logs and development ledgers. The supplied revision computation archive retains the broader record. Public access to this source repository is not a substitute for the original dataset's terms or the exact six-farm data identities.
+
+Verification for this release is a synthetic objective/domain-mass check, nine-head original-gap qualification, saved-model roundtrip and CLI fit/predict/score check. These are installation and implementation checks; no six-farm experiment was rerun during repository preparation. Dependency versions used for those checks are recorded in `provenance/validation.json`.

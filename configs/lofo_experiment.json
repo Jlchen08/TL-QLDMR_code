@@ -1,0 +1,52 @@
+{
+  "version": "V2_LOFO_five_donors96x4_ownfit_representations_20261113",
+  "sites": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "methods": [
+    "TL-QLDMR",
+    "Weighted-SVQR",
+    "HistQGBR",
+    "Target-onlySVQR"
+  ],
+  "budgets": [
+    32,
+    128,
+    512,
+    "all"
+  ],
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "objectives": [
+    "point",
+    "prob95"
+  ],
+  "query_budget": 96,
+  "donor_folds": 4,
+  "selection": "96 same-index procedures; each must qualify all4folds at all5donors; fold and donor equalweight; no heldout Q1/Q2/H2 scores",
+  "representation": "Reinstantiate selected procedure on each budget/seed own LOFO fitting set; own scalers and relative gamma, no mainfull2019 transforms",
+  "target_only": "Own V1 raw-missing-preserving target-only cache; ns0,ntN,Weighted-SVQR backend; same externally selected SVQR recipe",
+  "source": "Fixed audited V1 evenlyspaced1200 normal2019 rows per donor site (maximum6000); actual counts disclosed; no heldout normal labels",
+  "outputs": "Native9 unmodified raw predictions; point integratedmean and originaltau0.5; nominal95 endpoints; prob95-selected WIS diagnostic",
+  "limits": {
+    "seconds_per_fit_and_prediction": 7200,
+    "max_cpu_workers": 96,
+    "threads_per_worker": 1,
+    "kernel_max_iter": 100,
+    "kernel_seconds_per_head": 120,
+    "gap_rtol": 1e-05,
+    "gap_atol": 1e-07
+  },
+  "assessment": "Raw heldout H2, retrospective; noheldout Q2calibration; score requiresmainrelease and allLOFOchoices/finalattempts frozen",
+  "failure": "All attempts persisted; missing choice or any missingseed/site makes aggregate NR; no fallback after assessment",
+  "deadline_policy": "User-authorized development cutoff; only completed qualified original folds selected. Unfinished and failed are distinct.",
+  "source_sha256": "d966cc9bbdd2cf6e2f842d05e533d2ba149127861beea39af7f4272c89b2d144"
+}
